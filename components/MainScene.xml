@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MainScene" extends="Scene">
+
+    <interface>
+        <field id="exitApp" type="bool" alwaysnotify="true" value="false" />
+    </interface>
+
+    <script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
+
+    <!--===== commands  =====-->
+    <script type="text/brightscript" uri="pkg:/source/commands/NavigationChangeCommand.brs" />
+    <script type="text/brightscript" uri="pkg:/source/states/Home/commands/LoadCatalogCommand.brs" />
+
+    <!--===== controller  =====-->
+    <script type="text/brightscript" uri="pkg:/source/controller/AppController.brs" />
+    <script type="text/brightscript" uri="pkg:/source/controller/AbstractController.brs" />
+    <script type="text/brightscript" uri="pkg:/source/states/Home/HomeController.brs" />
+
+    <!--===== events  =====-->
+    <script type="text/brightscript" uri="pkg:/source/events/EventDispatcher.brs" />
+
+    <!--===== mediator  =====-->
+    <script type="text/brightscript" uri="pkg:/source/mediators/MainViewMediator.brs" />
+    <script type="text/brightscript" uri="pkg:/source/states/Home/mediators/HomeMediator.brs" />
+
+    <!--===== models  =====-->
+    <script type="text/brightscript" uri="pkg:/source/models/NavigateModel.brs" />
+    <script type="text/brightscript" uri="pkg:/source/models/DataModel.brs" />
+
+    <!--===== service  =====-->
+    <script type="text/brightscript" uri="pkg:/source/service/DataService.brs" />
+    <!--===== states  =====-->
+    <script type="text/brightscript" uri="pkg:/source/states/controllerNameState.brs" />
+    
+    <!--===== utils  =====-->
+    <script type="text/brightscript" uri="pkg:/source/utils.brs" />
+    <script type="text/brightscript" uri="pkg:/source/Transactions/TransactionPool.brs" />
+    <script type="text/brightscript" uri="pkg:/source/Transactions/TransactionService.brs" />
+    <script type="text/brightscript" uri="pkg:/source/Transactions/HttpsTransaction.brs" />
+
+    <children>
+        <Group id="MainView"></Group>
+    </children>
+
+</component>

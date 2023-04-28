@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="carouselD" extends="Group" >
+
+  <interface>
+    <field id="content" type="assocarray" alwaysNotify="true" onChange="onContentUpdate" />
+  </interface>
+
+  <script type="text/brightscript" uri="pkg:/components/carouselD/carouselD.brs" />
+
+  <children>
+        <Label 
+          id="carouselTitle"
+          font="font:MediumBoldSystemFont"
+          translation="[10,-50]"
+        />
+        <!-- Here to append all carouselItems -->
+        <Group 
+          id="carouselContainer"
+        />
+
+        <!-- With this timer user will not be allowed to fast click -->
+        <Timer id="navigationTimer" repeat="false" duration="1" />
+
+        <Animation id="transRightAnimation" duration="1" repeat="false" easeFunction="linear" >
+          <Vector2DFieldInterpolator 
+            id = "transGroupRight"
+            key="[0.0, 1.0]"
+            keyValue="[ [0.0, 230.0], [0.0, 230.0] ]"
+            fieldToInterp="carouselContainer.translation" />
+        </Animation>
+
+        <Animation id="transLeftAnimation" duration="1" repeat="false" easeFunction="linear" >
+          <Vector2DFieldInterpolator 
+            id = "transGroupLeft"
+            key="[0.0, 1.0]"
+            keyValue="[ [0.0, 230.0], [0.0, 230.0] ]"
+            fieldToInterp="carouselContainer.translation" />
+        </Animation>
+
+  </children>
+</component>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="HomeView" extends="Group" >
+
+  <interface>
+    <field id="content" type="assocarray" alwaysNotify="true" onChange="onContentUpdate" />
+  </interface>
+
+  <script type="text/brightscript" uri="pkg:/components/Home/HomeView.brs" />
+
+  <children>
+      <Group id="container">
+
+      <Rectangle id = "backgroundPoster"
+          translation = "[0, 0]"
+          width = "1920"
+          height = "1080"
+          color = "0x0C1021"/>
+
+      <carouselD 
+        id="carouselD"
+        translation="[0, 0]"
+      />
+
+      </Group>
+  </children>
+</component>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="carouselItem" extends="Group" >
+
+  <interface>
+    <field id="content" type="assocarray" alwaysNotify="true" onChange="onContentUpdate" />
+  </interface>
+
+  <script type="text/brightscript" uri="pkg:/components/carouselD/carouselItems/carouselItem.brs" />
+
+  <children>
+        <Group id="itemContainer">
+            <Rectangle 
+                id="background"
+                translation = "[0, 0]"
+                width = "720"
+                height = "270"
+                color = "#000000"
+            />
+
+            <!-- Images of 4x3 480, 360-->
+            <poster 
+                id="imageThumb"
+                width="360"
+                height="270"
+            />
+
+            <poster 
+                id="focusImage"
+                width = "720"
+                height = "270"
+                visible="false"
+            />
+            
+            <Label 
+                id="itemTitle"
+                font="font:MediumBoldSystemFont"
+                width="340"
+                height="50"
+                wrap="true"
+                translation = "[370, 40]"
+            />
+            <Label 
+                id="subtitleItem"
+                font="font:MediumBoldSystemFont"
+                width="350"
+                height="50"
+                wrap="true"
+                translation = "[370, 100]"
+            />
+            <Label 
+                id="descriptionItem"
+                width="300"
+                height="90"
+                wrap="true"
+                translation = "[370, 140]"
+            />
+      </Group>
+  </children>
+</component>
